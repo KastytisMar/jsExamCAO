@@ -8,3 +8,11 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+
+document.getElementById("search").addEventListener("input", function(e) {
+    e.preventDefault();
+    let kgs = e.target.value;
+    document.getElementById("outputLb").innerHTML = kgs * 0.0022046 + ' Weight Lbs';
+    document.getElementById("outputG").innerHTML = kgs / 0.0010000 + ' Weight Grams';
+    document.getElementById("outputOz").innerHTML = kgs * 35.274 + ' Weight Oz';
+});
